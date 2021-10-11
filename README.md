@@ -7,4 +7,4 @@
 - CSS Grid
 - SASS for nesting, module and custom properties.
 
-**Have a good day!** 🚀
+
