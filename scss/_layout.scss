@@ -1,0 +1,267 @@
+.header {
+    min-height: 100vh;
+    background-image: url("/images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    @include desktop {
+        min-height: auto;
+        background-image: url("/images/bg-header-desktop.png");
+        padding-bottom: 10rem;
+    }
+
+    &__container {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+
+    }
+
+    &__logo {
+        padding: 2rem;
+
+        @include desktop {
+            padding: 4rem;
+        }
+    }
+
+    &__text {
+        margin: 1rem 0;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}
+
+.snippets {
+    &__container {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 144rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "intro intro""desktop cards";
+        }
+    }
+
+    &__text-container {
+        @include desktop {
+            grid-area: intro;
+            max-width: 50rem;
+            margin: 0 auto 2rem auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__image-container {
+        margin: 2rem auto;
+
+        @include desktop {
+            grid-area: desktop;
+        }
+    }
+
+    &__benefits {
+        @include desktop {
+            grid-area: cards;
+            margin-left: 3rem;
+            text-align: left;
+            max-width: 30rem;
+        }
+    }
+
+    &__card {
+        margin-bottom: 1rem;
+    }
+}
+
+.access {
+    &__container {
+        @include flex-column;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+
+    &__text-container {
+        margin-bottom: 2rem;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+
+    &__image-container {
+        margin: 2rem auto;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+
+    &__info {
+        @include desktop {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__cards-container {
+        @include desktop {
+            max-width: 144rem;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__card {
+        margin: 3rem 0;
+        display: grid;
+        grid-template-rows: 5rem 4rem 1fr;
+
+        @include desktop {
+            margin: 0;
+            width: 33%;
+        }
+    }
+
+    &__card:not(:last-child) {
+        @include desktop {
+            margin-right: 2rem;
+        }
+    }
+
+    &__card-img {
+        margin: 0 auto;
+
+        @include desktop {
+            align-self: center;
+        }
+    }
+
+    &__card-title {
+        @include desktop {
+            line-height: 4rem;
+        }
+    }
+
+    &__card:first-child {
+        margin-top: 2rem;
+
+        @include desktop {
+            margin-top: 0;
+        }
+    }
+}
+
+.companies {
+    &__container {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 144rem;
+            flex-direction: row;
+            justify-content: center;
+            margin: 7rem auto;
+        }
+    }
+
+    &__logo {
+        margin: 3rem 0;
+
+        @include desktop {
+            padding: 1rem;
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+.download {
+    margin-bottom: 6rem;
+
+    @include desktop {
+        margin-bottom: 10rem;
+    }
+
+    &__container {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 50rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: rgba($grayish-blue, 0.2);
+    padding: 1.2rem 0;
+
+    &__container {
+        @include flex-column;
+
+        @include desktop {
+            max-width: 144rem;
+            display: grid;
+            grid-template-columns: 7rem auto auto;
+        }
+    }
+
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+        background-image: url("/images/logo.svg");
+        background-size: contain;
+        margin: 2rem 0;
+    }
+
+    &__socials {
+        margin: 2rem 0;
+
+        @include desktop {
+            text-align: right;
+        }
+    }
+
+    &__social {
+        @include desktop {
+            &:hover {
+                &>path {
+                    fill: $strong-cyan;
+                }
+            }
+        }
+    }
+
+    &__social:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    &__social-path {
+        transition: .4s;
+    }
+}
